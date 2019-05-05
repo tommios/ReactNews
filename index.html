@@ -16,8 +16,10 @@
       }
     </style>
   </head>
+
   <body>
     <div id="root"></div>
+
     <script type="text/babel">
       const myNews = [
         {
@@ -42,6 +44,7 @@
             "Бесплатно. Без смс, про реакт, заходи - https://maxpfrontend.ru",
         },
       ];
+
       class News extends React.Component {
         render() {
           const { data } = this.props; // аналогично записи const data = this.props.data
@@ -68,14 +71,11 @@
           );
         }
       }
-      const Comments = () => {
-        return <p>Нет новостей - комментировать нечего.</p>;
-      };
+
       const App = () => {
         return (
           <React.Fragment>
             <News data={myNews} />
-            <Comments />
           </React.Fragment>
         );
       };
