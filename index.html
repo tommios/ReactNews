@@ -43,8 +43,20 @@
   </head>
 
   <body>
+    <div id="time"></div>
     <div id="root"></div>
     <script type="text/babel">
+
+      function tick() {
+        ReactDOM.render(
+          <div>
+            <h2>Текущее время {new Date().toLocaleTimeString()}.</h2>
+          </div>,
+          document.getElementById("time")
+        );
+      }
+      setInterval(tick, 1000);
+
       const myNews = [
         {
           id: 1,
